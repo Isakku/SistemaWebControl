@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html class="ui-mobile">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+
+	<meta charset="utf-8">
+	<title>My Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/slider-style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    
+	<script type="text/javascript" src="LoginFunctions.js"></script>
+
+
+</head> 
+
+<body class="ui-mobile-viewport"> 
+
+
+<!-- Start of first page -->
+<div data-role="page" id="Main">
+        <!-- start header -->
+	<div data-role="header" data-nobackbtn="true">
+		<h1>Sistema de control</h1>
+		<a href="#login_ui" id="login_ui_btn" data-rel="dialog" class="ui-btn-right">Acceder</a>
+	<div data-role="navbar" data-iconpos="right">
+		<ul>
+			<li><a href="#help" id="help_ui_btn" data-transition="pop" data-icon="info" data-iconpos="right" data-theme="b">Ayuda</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+	<!-- /header -->
+
+	<div data-role="content">
+		<p style='text-align: center;'>
+		<br>	
+		Bienvenido, deber&aacute; acceder para utilizar el sistema
+		<br>
+       		 <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <a href="#"><img src="img/Slider_1.jpg" alt="" /></a>
+                    <a href="#"><img src="img/Slider_2.jpg" alt="" /></a>
+                    <a href="#"><img src="img/Slider_3.jpg" alt="" /></a>
+                    
+                </div>
+                <div id="htmlcaption" class="nivo-html-caption">
+                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                </div>
+              </div>
+        
+		</p>	
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>My Mobile App</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of LogIn page -->
+<div data-role="page" id="login_ui" style='text-align: center;'>
+
+
+	<!-- start header -->
+	<div data-role="header">
+		<h1>Login</h1>
+		<a href="#Main" class="ui-btn-right">Cancel</a>
+	</div>
+	<!-- end header -->
+
+	<!-- content -->
+	<div data-role="content">	
+
+	<p>Identif&iacute;quese para acceder </p>
+
+	<form method="post" id="loginform" action="#"> 			<!--<form method="post" id="loginform" action="javascript:alert('success!');">-->
+		<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+			<label for="login_userci" class="ui-input-text">C&eacute;dula de identidad:</label>
+			<input name="login_userci" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="login_userci" type="text" value="">
+
+			<label class="ui-input-text" for="login_userpass">Password:</label>
+			<input name="login_userpass" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="login_userpass" type="password" value="">
+
+			<input id="Login_userbttn" tabindex="-1" data-icon="check" class="button submit ui-btn" value="Login" type="submit" data-theme="b">
+
+			<p style='text-align: center;'><span id="res"></span></p>
+		</div>
+	</form>
+
+
+
+
+
+
+	</div>
+	<!-- /content -->
+
+
+	<div data-role="footer">
+		<h4>Acceso</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of help page: #popup -->
+<div data-url="popup" data-role="page" id="help">
+
+	<div data-role="header" data-theme="e">
+		<h1>Ayuda del sistema</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>P&aacute;gina de inicio</h2>
+		<p>Para acceder simplemente introduzca su C&eacute;dula de identidad y su contrase&ntilde;a. Si no las tiene, deber&aacute; registrarse con el administrador del sistema.</p>		
+		<p><a href="#NewUsr" data-rel="back" data-role="button" data-inline="true" data-icon="back">Atr&aacute;s</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+
+
+<div style="top: 273px;" class="ui-loader ui-body-a ui-corner-all"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+
+</html>

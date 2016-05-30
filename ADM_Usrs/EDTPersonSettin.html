@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html class="ui-mobile">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+
+	<meta charset="utf-8">
+	<title>My Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="../LoginFunctions.js"></script>
+
+
+</head> 
+
+<body class="ui-mobile-viewport"> 
+
+
+<!-- Start of first page -->
+<div data-role="page" id="EditUsrSettings">
+
+        <!-- start header -->
+	<div data-role="header" data-nobackbtn="true">
+		<h1>Sistema de control</h1>
+		<a data-theme="a" data-ajax="false" id="bk" href="../usr_menu.html" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-icon="arrow-l"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Atr&aacute;s</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></span></a>
+	<div data-role="navbar" data-iconpos="right">
+		<ul>
+			<li><a href="#USRsettingsHelp" id="help_ui_btn" data-icon="info" data-iconpos="right" data-theme="b">Ayuda</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+	<!-- /header -->
+
+	<div data-role="content">
+
+
+
+	<p style='text-align: center;'>Datos Personales</p>
+
+
+	<form method="post" id="EditUSRSettFRM" action="#"> 			<!--<form method="post" id="loginform" action="javascript:alert('success!');">-->
+		<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+			<label for="userci" class="ui-input-text">C&eacute;dula de identidad:</label>
+			<input name="userci" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="userci" type="text" value="">
+
+			<label class="ui-input-text" for="password">Password Actual:</label>
+			<input name="password" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="password" type="password" value="">
+
+
+			<label class="ui-input-text" for="password1">Nueva Password:</label>
+			<input name="password1" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="password1" type="password" value="">
+
+
+			<label class="ui-input-text" for="password2">Nueva Password (confirmar):</label>
+			<input name="password2" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="password2" type="password" value="">
+
+
+			<input id="SubmitUSRSettings" tabindex="-1" data-icon="check" class="button submit ui-btn" value="Guardar Cambios" type="submit" data-theme="b">
+
+			<p style='text-align: center;'><span id="EditUSRSettingsRES"></span></p>
+		</div>
+	</form>
+
+
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>My Mobile App</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of help page: #popup -->
+<div data-url="popup" data-role="page" id="USRsettingsHelp">
+
+	<div data-role="header" data-theme="e">
+		<h1>Ayuda del sistema</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Datos personales</h2>
+		<p>Cambie aqu&iacute; sus datos personales, para ello debe primero introducir su  C&eacute;dula de identidad y su contrase&ntilde;a. Actualmente solo puede cambiar su contrase&ntilde;a Note que no debe haber espacios en blanco.</p>		
+		<p><a href="#NewUsr" data-rel="back" data-role="button" data-inline="true" data-icon="back">Atr&aacute;s</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+
+<div style="top: 273px;" class="ui-loader ui-body-a ui-corner-all"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html class="ui-mobile">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+
+	<meta charset="utf-8">
+	<title>My Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="../LoginFunctions.js"></script>
+
+
+</head> 
+
+<body class="ui-mobile-viewport"> 
+
+
+<!-- Start of first page -->
+<div data-role="page" id="DisableUsr">
+
+        <!-- start header -->
+	<div data-role="header" data-nobackbtn="true">
+		<h1>Sistema de control</h1>
+		<a data-theme="a" data-ajax="false" id="bk" href="../usr_menu.html" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-icon="arrow-l"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Atr&aacute;s</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></span></a>
+		<ul>
+			<li><a href="#DisableUSRHelp" id="help_ui_btn" data-icon="info" data-iconpos="right" data-theme="b">Ayuda</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+	<!-- /header -->
+
+	<div data-role="content">
+
+
+	<p style='text-align: center;'>Introducir criterio de b&uacute;squeda del usuario</p>
+
+	<form method="post" id="SearchUsrForm" action="#">
+		<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+			<label for="Suserci" class="ui-input-text">C&eacute;dula de identidad:</label>
+			<input name="Suserci" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="Suserci" type="search" value="" onKeyPress=" BuscarUsuarioValidCI(event)">
+
+			<input id="SubmitSearchUsr" tabindex="-1" data-icon="check" class="button submit ui-btn" value="Buscar Usuario" type="submit" data-theme="b">
+
+			<p style='text-align: center;'><span id="searchres"></span></p>
+		</div>
+	</form>
+
+
+	<form method="post" id="DisableUsrForm" action="#">
+		<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+				<ul data-role="listview" data-inset="false" data-theme="c" data-dividertheme="a"> 
+					<li data-role="list-divider">Datos de usuario</li> 
+					<li>
+						<label for="userci">C&eacute;dula de identidad:</label>
+						<span id="userci"></span>
+					</li>
+
+					<li>
+						<label for="username">Nombre de Usuario:</label>
+						<span id="username"></span>
+					</li>
+
+					<li>
+						<label for="userlastname1">Apellido Paterno:</label>
+						<span id="userlastname1"></span>
+					</li>
+
+					<li>
+						<label for="userlastname2">Apellido Materno:</label>
+						<span id="userlastname2"></span>
+					</li>
+
+					<li>
+						<label for="usertype">Tipo de Usuario:</label>
+						<span id="usertype"></span>
+					</li>
+
+				</ul>
+
+
+			<input id="SubmitDisableUsr" tabindex="1" data-icon="check" class="button submit ui-btn" value="Borrar Usuario" type="submit" data-theme="b">
+
+			<p style='text-align: center;'><span id="DisableUsrRES"></span></p>
+		</div>
+	</form>
+
+
+
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>My Mobile App</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of help page: #popup -->
+<div data-url="popup" data-role="page" id="DisableUSRHelp">
+
+	<div data-role="header" data-theme="e">
+		<h1>Ayuda del sistema</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Borrar Usuario</h2>
+		<p>Para borrar un usuario, simplemente utilize el buscador provisto y el sistema le mostrar� los datos del usuario a borrarse. Luego presione el bot&oacute;n "Borrar usuario" para confirmar.</p>		
+		<p><a href="#NewUsr" data-rel="back" data-role="button" data-inline="true" data-icon="back">Atr&aacute;s</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+
+<div style="top: 273px;" class="ui-loader ui-body-a ui-corner-all"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+
+</html>

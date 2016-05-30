@@ -1,0 +1,120 @@
+﻿<!DOCTYPE HTML>
+<html class="ui-mobile">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+
+	<meta charset="utf-8">
+	<title>My Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="../LoginFunctions.js"></script>
+
+
+</head> 
+
+<body class="ui-mobile-viewport"> 
+
+
+<!-- Start of first page -->
+<div data-role="page" id="EditUsr">
+
+        <!-- start header -->
+	<div data-role="header" data-nobackbtn="true">
+		<h1>Sistema de control</h1>
+		<a data-theme="a" data-ajax="false" id="bk" href="../usr_menu.html" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-icon="arrow-l"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Atr&aacute;s</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></span></a>
+	<div data-role="navbar" data-iconpos="right">
+		<ul>
+			<li><a href="#EditUSRHelp" id="help_ui_btn" data-icon="info" data-iconpos="right" data-theme="b">Ayuda</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+	<!-- /header -->
+
+	<div data-role="content">
+
+
+
+	<p style='text-align: center;'>Introducir criterio de b&uacute;squeda del usuario</p>
+
+	<form method="post" id="SearchUsrForm" action="#">
+		<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+			<label for="SearchData" class="ui-input-text">C&eacute;dula de identidad o Nombre:</label>
+			<input name="SearchData" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="SearchData" type="search" value="" >
+<!--onKeyPress=" BuscarUsuarioValidCI(event)"-->
+			<input id="SubmitSearchUsr" tabindex="-1" data-icon="check" class="button submit ui-btn" value="Buscar Usuario" type="submit" data-theme="b">
+
+			<p style='text-align: center;'><span id="searchres"></span></p>
+		</div>
+	</form>
+
+
+
+
+
+	<p style='text-align: center;'>Datos del usuario</p>
+
+	<form method="post" id="EditUsrForm" action="#">
+		<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+
+        	<label>C&eacute;dula de identidad:</label>
+			<span id="userci"></span><br>
+			<label for="username" class="ui-input-text">Nombre de Usuario:</label>
+			<input name="username" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="username" type="text" value="">
+
+			<label for="userlastname1" class="ui-input-text">Apellido Paterno:</label>
+			<input name="userlastname1" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="userlastname1" type="text" value="">
+
+			<label for="userlastname2" class="ui-input-text">Apellido Materno:</label>
+			<input name="userlastname2" class="text ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" id="userlastname2" type="text" value="">
+
+			<label for="usertype" class="ui-input-text">Tipo de Usuario:</label>
+      			<select id="usertype" data-native-menu="false">
+   	   		    <option value="Normal">Normal</option> 
+   	   		    <option value="Administrador">Administrador</option> 
+   	  		</select> 
+
+
+			<input id="SubmitEditUsr" tabindex="1" data-icon="check" class="button submit ui-btn" value="Guardar Cambios en Usuario" type="submit" data-theme="b">
+
+			<p style='text-align: center;'><span id="EditUsrRES"></span></p>
+		</div>
+	</form>
+
+
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>My Mobile App</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of help page: #popup -->
+<div data-url="popup" data-role="page" id="EditUSRHelp">
+
+	<div data-role="header" data-theme="e">
+		<h1>Ayuda del sistema</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Editar Datos personales</h2>
+		<p>Cambie aqu&iacute; datos personales de usuario, para ello simplemente utilize el buscador provisto y el sistema le mostrar� los datos del usuario que usted puede editar.</p>		
+		<p><a href="#NewUsr" data-rel="back" data-role="button" data-inline="true" data-icon="back">Atr&aacute;s</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+<div style="top: 273px;" class="ui-loader ui-body-a ui-corner-all"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+
+</html>

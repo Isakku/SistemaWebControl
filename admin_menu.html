@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html class="ui-mobile">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+
+	<meta charset="utf-8">
+	<title>My Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/slider-style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+	<script type="text/javascript" src="LoginFunctions.js"></script>
+
+</head> 
+
+<body class="ui-mobile-viewport"> 
+
+
+<!-- Start of first page -->
+<div data-role="page" id="Main">
+
+        <!-- start header -->
+	<div data-role="header" data-nobackbtn="true">
+		<h1>Sistema de control</h1>
+		<a data-ajax="false" href="logout.php" id="sessionKiller" data-rel="dialog" class="ui-btn-right">Cerrar Sesi&oacute;n</a>
+	<div data-role="navbar" data-iconpos="right">
+		<ul>
+			<li><a href="#admhelp" id="help_ui_btn" data-transition="pop" data-icon="info" data-iconpos="right" data-theme="b">Ayuda</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+	<!-- /header -->
+
+	<div data-role="content">
+
+
+       		<div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <a href="#"><img src="img/Slider_1.jpg" alt="" /></a>
+                    <a href="#"><img src="img/Slider_2.jpg" alt="" /></a>
+                    <a href="#"><img src="img/Slider_3.jpg" alt="" /></a>
+                    
+                </div>
+                <div id="htmlcaption" class="nivo-html-caption">
+                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                </div>
+              </div>
+
+		<div class="ui-collapsible-set" data-role="collapsible-set" data-theme="c" data-content-theme="d">
+			<div class="ui-collapsible ui-collapsible-collapsed" data-role="collapsible"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a data-theme="c" href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-corner-top ui-btn-up-c"><span aria-hidden="true" class="ui-btn-inner"><span class="ui-btn-text">Administrar Usuarios<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-shadow ui-icon-plus"></span></span></a></h3><div aria-hidden="true" class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed">
+				
+				<p>Administre los usuarios del sistema</p>
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="a"> 
+					<li data-role="list-divider">Administraci&oacute;n_De_Usuarios</li> 
+					<li><a data-ajax="false" href="ADM_Usrs/MKNewUsr.html">Registrar Nuevo Usuario</a></li>
+					<li><a data-ajax="false" href="ADM_Usrs/EditUsr.html">Editar Usuarios</a></li>
+					<li><a data-ajax="false" href="ADM_Usrs/DisableUsr.html">Dar de baja Usuario</a></li>
+					<li><a data-ajax="false" href="ADM_Usrs/EDTPersonSettin.html">Editar datos personales</a></li>
+
+				</ul>
+
+
+			</div></div>
+			<div class="ui-collapsible ui-collapsible-collapsed" data-role="collapsible"><h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed"><a data-theme="c" href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-c"><span aria-hidden="true" class="ui-btn-inner"><span class="ui-btn-text">Administrar Productos<span class="ui-collapsible-heading-status"> click to expand contents</span></span><span class="ui-icon ui-icon-shadow ui-icon-plus"></span></span></a></h3><div aria-hidden="true" class="ui-collapsible-content ui-body-d ui-collapsible-content-collapsed">
+				
+				<p>Administre los productos</p>
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="a"> 
+					<li data-role="list-divider">Administraci&oacute;n_De_Productos</li> 
+					<li><a data-ajax="false" href="ADM_Prods/AddProduct.html">Registrar Nuevo Producto</a></li>
+					<li><a data-ajax="false" href="ADM_Prods/DisableProd.html">Dar de baja Producto</a></li>
+					<li><a data-ajax="false" href="ADM_Prods/EditProd.html">Cambiar propiedades de Producto</a></li>
+					<li><a data-ajax="false" href="ADM_Prods/sell_ui.html">Venta de Productos</a></li>
+				</ul>
+
+
+
+
+			</div></div>
+			<div class="ui-collapsible" data-role="collapsible"><h3 class="ui-collapsible-heading"><a data-theme="c" href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-c"><span aria-hidden="true" class="ui-btn-inner"><span class="ui-btn-text">Administraci&oacute;n Georeferencial<span class="ui-collapsible-heading-status"> click to collapse contents</span></span><span class="ui-icon ui-icon-shadow ui-icon-minus"></span></span></a></h3><div aria-hidden="false" class="ui-collapsible-content ui-body-d ui-corner-bottom">
+				
+				<p>Administre los datos geogr&aacute;ficos del sistema</p>
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="a"> 
+					<li data-role="list-divider">_Administraci&oacute;n_Georeferencial_</li> 
+					<!-- / <li><a data-ajax="false" href="mknewusr.html">Registrar Nuevo Punto de venta</a></li> -->
+					<li><a data-ajax="false" href="ADM_Maps/MapVentas.html">Mostrar mapa de ventas georeferenciadas de usuarios</a></li>
+					<!-- / <li><a data-ajax="false" href="mknewusr.html">Mostrar mapa de rutas de usuarios</a></li> -->
+				</ul>
+
+			</div></div>
+		</div>
+
+
+
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>My Mobile App</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of help page: #popup -->
+<div data-url="popup" data-role="page" id="admhelp">
+
+	<div data-role="header" data-theme="e">
+		<h1>Ayuda del sistema</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Men&uacute; principal</h2>
+		<p>Desde aqu&iacute; puede acceder a todas las funciones del sistema. Simplemente elija la opci&oacute;n deseada abriendo la subsecci&oacute;n de su elecci&oacute;n</p>		
+		<p><a href="#NewUsr" data-rel="back" data-role="button" data-inline="true" data-icon="back">Atr&aacute;s</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+
+<div style="top: 273px;" class="ui-loader ui-body-a ui-corner-all"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+
+</html>
