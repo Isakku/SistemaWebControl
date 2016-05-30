@@ -1,0 +1,176 @@
+﻿<!DOCTYPE HTML>
+<html class="ui-mobile">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ 
+
+	<meta charset="utf-8">
+	<title>My Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" type="text/css" href="../jquery-ui-map-3.0-alpha/demos/css/main.css" /><!--this css is required for the map-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    
+
+		<script type="text/javascript" src="../jquery-ui-map-3.0-alpha/ui/jquery.ui.map.js"></script>
+		<script type="text/javascript" src="../jquery-ui-map-3.0-alpha/ui/jquery.ui.map.services.js"></script>
+		<script type="text/javascript" src="../jquery-ui-map-3.0-alpha/ui/jquery.ui.map.extensions.js"></script>
+        
+	<script type="text/javascript" src="../LoginFunctions.js"></script>
+
+	<script type="text/javascript" src="http://filamentgroup.github.com/EnhanceJS/enhance.js"></script>	
+    	<script type="text/javascript">
+		// Run capabilities test
+		enhance({
+			loadScripts: [
+				{src: 'js/excanvas.js', iecondition: 'all'},
+				'js/visualize.jQuery.js',
+				'js/Ventas_filtering.js'
+			],
+			loadStyles: [
+				'css/visualize.css',
+				'css/visualize-dark.css'
+			]	
+		});   
+    </script>
+    
+        <style type="text/css">
+    	/*some demo styles*/
+    	/*body { font-size: 62.5%; }*/
+    	.enhanced h2, .enhanced pre { margin: 3em 20px .5em; }
+    	.enhanced pre { width: 50%; overflow: auto; font-size: 1.4em; margin-top: 0; background: #444; padding: 15px; color: #fff; }
+
+    	td input { border: 1px solid orange; background: yellow; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; position: absolute; padding: 8px 0; text-align: center; width: 60px; margin: -17px 0 0 4px; font-size: 1.4em; }
+    	td.input { padding: 0; position: relative; }
+		
+		#visualize {
+			width: 500px;
+			position: relative;
+			left : 50%;
+			margin-left: -250px;
+		}
+    	</style>
+    
+</head> 
+
+<body class="ui-mobile-viewport"> 
+
+		<div id="gmap-3-report" data-role="page">
+
+ 			<!-- start header -->
+			<div data-role="header" data-nobackbtn="true">
+				<h1>Sistema de control</h1>
+				<a data-theme="a" data-ajax="false" href="../admin_menu.html" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-icon="arrow-l"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Atr&aacute;s</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span></span></a>
+			</div>
+			<!-- /header -->
+
+			
+			<div data-role="content">
+
+							<div class="item gradient ui-corner-all shadow-all">
+                                <div id="map_canvas"></div>
+                            </div>
+                            
+                            <div id="visualize">
+                            <table id="ventas">
+                            <caption>Ventas de Empleados por producto</caption>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <th scope="col">Domingo</th>
+                                    <th scope="col">Lunes</th>
+                                    <th scope="col">Martes</th>
+                                    <th scope="col">Miércoles</th>
+                                    <th scope="col">Jueves</th>
+                                    <th scope="col">Viernes</th>
+                                    <th scope="col">Sábado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Pilfrut</th>
+                                    <td>190</td>
+                                    <td>160</td>
+                                    <td>40</td>
+                                    <td>120</td>
+                                    <td>30</td>
+                                    <td>70</td>
+                                    <td>610</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Chicolac</th>
+                                    <td>3</td>
+                                    <td>40</td>
+                                    <td>30</td>
+                                    <td>45</td>
+                                    <td>35</td>
+                                    <td>49</td>
+                                    <td>202</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Leche UHT</th>
+                                    <td>10</td>
+                                    <td>180</td>
+                                    <td>10</td>
+                                    <td>85</td>
+                                    <td>25</td>
+                                    <td>79</td>
+                                    <td>389</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Leche Light</th>
+                                    <td>40</td>
+                                    <td>80</td>
+                                    <td>90</td>
+                                    <td>25</td>
+                                    <td>15</td>
+                                    <td>119</td>
+                                    <td>369</td>
+                                </tr>		
+                                <tr>
+                                    <th scope="row">Total</th>
+                                    <td>243</td>
+                                    <td>460</td>
+                                    <td>170</td>
+                                    <td>275</td>
+                                    <td>105</td>
+                                    <td>317</td>
+                                    <td>1570</td>
+                                </tr>
+                            </tbody>
+                        </table>	
+                       </div>
+                           
+				
+
+			</div>
+			
+
+		<div data-role="footer" data-theme="a">
+			<h4><a data-ajax="false" href="/">jQuery mobile with Google maps </a>My Mobile App</h4>
+		</div><!-- /footer -->
+
+
+			<div id="ft" class="hidden" itemscope itemtype="http://data-vocabulary.org/Person">
+				Map Plugin Author: 
+				<span itemprop="name">Johan S&auml;ll Larsson</span>  
+				<span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+					<span itemprop="locality">G&ouml;teborg</span>, 
+					<span itemprop="country-name">Sweden</span> 
+				</span>
+			</div>
+
+			
+		</div>
+
+
+<div style="top: 273px;" class="ui-loader ui-body-a ui-corner-all"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+
+</html>
